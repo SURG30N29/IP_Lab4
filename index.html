@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized TShirts</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <h1>Customized TShirts</h1>
+    </header>
+
+    <form id="orderForm" onsubmit="processOrder(event)">
+        <fieldset>
+            <legend><h3><u>Basic Information</u></h3></legend>
+
+            <div>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" size="40" placeholder="Enter your full name" required/>
+            </div>
+            <br>
+            <div>
+                <label for="age">Age:</label>
+                <input type="number" id="age" min="0" placeholder="Enter your age" required/>
+            </div>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend><h3><u>TShirt Information</u></h3></legend>
+
+            <div>
+                <label for="tagline">Tagline for Tshirt:</label>
+                <input type="text" id="tagline" size="80" maxlength="50" placeholder="Enter your custom tagline (Max 50 characters)" required/>
+            </div>
+            <br>
+            <div>
+                <label for="color">Color of Tshirt:</label>
+                <select id="color" required>
+                    <option value="" disabled selected>Select a color</option>
+                    <option>Red</option>
+                    <option>Green</option>
+                    <option>Yellow</option>
+                    <option>Blue</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="size">Size of Tshirt:</label>
+                <select id="size" required>
+                    <option value="" disabled selected>Select a size</option>
+                    <option>XS</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" min="1" placeholder="Enter quantity" required/>
+            </div>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend><h3><u>Delivery Information</u></h3></legend>
+
+            <div>
+                <label for="address1">Address 1st Line:</label>
+                <input type="text" id="address1" size="40" placeholder="Enter first line of address" required/>
+            </div>
+            <br>
+            <div>
+                <label for="address2">Address 2nd Line:</label>
+                <input type="text" id="address2" size="40" placeholder="Enter second line of address" required/>
+            </div>
+            <br>
+            <div>
+                <label for="city">City:</label>
+                <select id="city" required>
+                    <option value="" disabled selected>Select a city</option>
+                    <option>Mumbai</option>
+                    <option>Pune</option>
+                    <option>Nagpur</option>
+                    <option>Nashik</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="pincode">Pincode:</label>
+                <input type="text" id="pincode" pattern="[0-9]{6}" placeholder="Enter 6-digit pincode" required/>
+            </div>
+            <br>
+            <div>
+                <label for="email">Email Id:</label>
+                <input type="email" id="email" placeholder="Enter your email" required/>
+            </div>
+            <br>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" required/>
+            </div>
+            <br>
+            <div>
+                <label for="deliveryDate">Delivery Date:</label>
+                <input type="date" id="deliveryDate" required/>
+            </div>
+            <br>
+            <div>
+                <label for="instructions">Additional Delivery Instructions:</label>
+                <textarea id="instructions" rows="4" cols="50" placeholder="Any additional instructions"></textarea>
+            </div>
+        </fieldset>
+        <input type="submit" id="submitButton" value="Submit Order"/>
+        <input type="reset" id="resetButton" value="Reset Form"/>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
